@@ -1,5 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import fs from "fs";
+import { flatten, sample } from "lodash";
 
 type NoaaResponse = {
   results: any[];
@@ -45,12 +46,12 @@ const run = async () => {
           }
         }
       );
-      yearData = [...yearData, ...response.request];
+      yearData.push(response.data.results);
     }
 
     fs.writeFileSync(
       `${datasetId}_${year}.json`,
-      JSON.stringify(yearData, null, 2)
+      JSON.stringify(flatten(yearData), null, 2)
     );
   }
 };
