@@ -13,6 +13,6 @@ copy your `apiKey` and paste them in the code. Running with
 
 ## Source
 ### Thai stationID
-https://www7.ncdc.noaa.gov/CDO/cdosubqueryrouter.cmd#
+https://www7.ncdc.noaa.gov/CDO/cdoselect.cmd?datasetabbv=GSOD&countryabbv=&georegionabbv
 ### Docs
 https://www.ncdc.noaa.gov/cdo-web/webservices/v2
