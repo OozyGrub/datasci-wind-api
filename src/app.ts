@@ -1,6 +1,6 @@
 import axios, { AxiosResponse } from "axios";
 import fs from "fs";
-import { flatten, sample } from "lodash";
+import { flatten } from "lodash";
 
 type NoaaResponse = {
   results: any[];
@@ -10,7 +10,7 @@ type NoaaResponse = {
 const run = async () => {
   const token = "lOFgkMxJfHJCktMkcFbPoiedmEIxXTJO";
   const baseUrl = "https://www.ncdc.noaa.gov/cdo-web/api/v2";
-  for (let year = 2016; year <= 2016; year++) {
+  for (let year = 2017; year <= 2017; year++) {
     console.log(`year: ${year}`);
     let yearData: any[] = [];
 
